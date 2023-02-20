@@ -1,0 +1,54 @@
+[
+    { 
+        "title": "Appartement moderne et original", 
+        "location":  "LE BARDO, TUNIS",         
+        "priceDollar": {
+            "sale": 1300000,
+            "rent": null
+        },
+        "priceEuro": {
+            "sale": 1160000,
+            "rent": null
+        },
+        "image": "assets/images/props/flat-1/1-big.jpg" 
+    },
+    { 
+        "title": "Maison familiale confortable", 
+        "location": "MORNAG, BEN AROUS", 
+        "priceDollar": {
+            "sale": 2550000,
+            "rent": null
+        },
+        "priceEuro": {
+            "sale": 2280000,
+            "rent": null
+        },  
+        "image": "assets/images/props/house-1/5-big.jpg"
+    },
+    { 
+        "title": "Appartements de luxe", 
+        "location": "JARDIN DE CARTHAGE, TUNIS",
+        "priceDollar": {
+            "sale": 2500000,
+            "rent": null
+        },
+        "priceEuro": {
+            "sale": 2200000,
+            "rent": null
+        },
+        "image": "assets/images/props/office-2/6-big.jpg"
+    },
+    { 
+        "title": "Appartement situé au centre", 
+        "location": "DJERBA-HOUMT SOUK, MÉDENINE", 
+        "priceDollar": {
+            "sale": null,
+            "rent": 5600
+        },
+        "priceEuro": {
+            "sale": null,
+            "rent": 5000
+        }, 
+        "image": "assets/images/props/apartment/1-big.jpg"
+    } 
+]

@@ -1,0 +1,24 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    margin-right: 1px;
+  }
+  
+  .add{
+    width:100px;
+    height:100px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+  }
+  .add .fa{
+  cursor: pointer;
+   padding: 32px;
+    font-size: 3em;
+  }

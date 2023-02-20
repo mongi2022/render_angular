@@ -1,0 +1,97 @@
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="50" class="p-3">
+        <h2 class="text-muted text-center fw-600 mb-3">Details du compte</h2>
+        <form [formGroup]="infoForm" enctype='multipart/form-data' (ngSubmit)="onInfoFormSubmit(infoForm.value)"> 
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Nom</mat-label>
+                <input matInput placeholder="Name" formControlName="name" required autocomplete="off">
+                <mat-error *ngIf="infoForm.controls.name.errors?.required">Name is required</mat-error>
+                <mat-error *ngIf="infoForm.controls.name.hasError('minlength')">Name isn't long enough, minimum of 3 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" required autocomplete="off">
+                <mat-error *ngIf="infoForm.controls.email.errors?.required">Email is required</mat-error>
+                <mat-error *ngIf="infoForm.controls.email.hasError('invalidEmail')">Invalid email address</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Tel</mat-label>
+                <input matInput placeholder="Phone" formControlName="phone" required onlyNumber autocomplete="off">
+                <mat-error *ngIf="infoForm.controls.phone.errors?.required">Phone is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Photo</mat-label>
+                <input matInput placeholder="Photo" formControlName="photo"   autocomplete="off">
+            </mat-form-field>
+            <span class="add">
+                <label for="upload">
+                    <mat-icon>perm_media</mat-icon>
+<!--                     <input-file (change)="onSelect($event)"  placeholder="Image (lien de l'image)"  fileLimit="1" fileAccept="image/*" [linkEnabled]="true"></input-file>  
+ -->
+           <input type='file' placeholder="Image (lien de l'image)"   (change)="onSelect($event)" hidden id="upload">
+              </label>
+            </span>
+         <!--    <div class="mb-3">
+                <input type='file'  (change)="onSelect($event)"  placeholder="Image (lien de l'image)" formControlName="image" fileLimit="1" fileAccept="image/*" [linkEnabled]="true">
+
+               <input-file  placeholder="Image (lien de l'image)" formControlName="image" fileLimit="1" fileAccept="image/*" [linkEnabled]="true"></input-file>  
+          </div> -->   
+    
+          <!--   <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Organisation</mat-label>
+                <input matInput placeholder="organization" formControlName="organization" autocomplete="off"> 
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Facebook</mat-label>
+                <input matInput placeholder="facebook" formControlName="facebook" autocomplete="off"> 
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Twitter</mat-label>
+                <input matInput placeholder="twitter" formControlName="twitter" autocomplete="off"> 
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Linkedin</mat-label>
+                <input matInput placeholder="linkedin" formControlName="linkedin" autocomplete="off"> 
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Instagram</mat-label>
+                <input matInput placeholder="instagram" formControlName="instagram" autocomplete="off"> 
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Site</mat-label>
+                <input matInput placeholder="website" formControlName="website" autocomplete="off"> 
+            </mat-form-field>
+ -->
+            <div class="text-center mt-2">
+                <button mat-raised-button (click)="updateUser()" color="primary" type="submit" class="uppercase">Mettre à jour profil</button>
+            </div> 
+        </form>
+    </div>
+    
+    <!-- <div fxFlex="100" fxFlex.gt-sm="50" class="p-3" ngClass.sm="mt-2" ngClass.xs="mt-2">
+        <h2 class="text-muted text-center fw-600 mb-3">Changer mot de passe</h2>
+        <form [formGroup]="passwordForm" (ngSubmit)="onPasswordFormSubmit(passwordForm.value)">            
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Mot de passe actuel</mat-label>
+                <input matInput placeholder="Current Password" formControlName="currentPassword" type="password" minlength="6" required autocomplete="off">
+                <mat-error *ngIf="passwordForm.controls.currentPassword.errors?.required">Current Password is required</mat-error>
+                <mat-error *ngIf="passwordForm.controls.currentPassword.hasError('minlength')">Current Password isn't long enough, minimum of 6 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Nouveau mot de passe</mat-label>
+                <input matInput placeholder="New Password" formControlName="newPassword" type="password" minlength="6" required autocomplete="off">
+                <mat-error *ngIf="passwordForm.controls.newPassword.errors?.required">New Password is required</mat-error>
+                <mat-error *ngIf="passwordForm.controls.newPassword.hasError('minlength')">New Password isn't long enough, minimum of 6 characters</mat-error>
+            </mat-form-field> 
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Confirmer nouveau mot de passe</mat-label>
+              <input matInput placeholder="Confirm New Password" formControlName="confirmNewPassword" type="password" required autocomplete="off">
+              <mat-error *ngIf="passwordForm.controls.confirmNewPassword.errors?.required">Confirm New Password is required</mat-error>
+              <mat-error *ngIf="passwordForm.controls.confirmNewPassword.hasError('mismatchedPasswords')">Passwords do not match</mat-error>
+            </mat-form-field>
+            <div class="text-center mt-2">
+                <button mat-raised-button color="primary" type="submit" class="uppercase">Changer mot de passe</button>
+            </div>
+        </form> 
+    </div>-->
+</div> 
